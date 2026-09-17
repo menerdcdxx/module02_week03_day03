@@ -1,160 +1,151 @@
 <!DOCTYPE html>
 <html>
 
-<style>
-    /* FadeOut Animation */
-    @keyframes fadeOut {
-        0% { opacity: 1; }
-        100% { opacity: 0; }
-    }
-    .fadeOut {
-        animation: fadeOut 2s ease forwards;
-    }
-
-    /* Slide Animation */
-    @keyframes slideIn {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-100vh); }
-    }
-    .slide {
-        animation: slideIn 2s ease forwards;
-    }
-
-    /* Grow Animation */
-    @keyframes grow {
-        0% { transform: scale(1); }
-        100% { transform: scale(1.5); }
-    }
-    .grow {
-        animation: grow 2s ease forwards;
-    }
-
-</style>
-
 <body>
-    <div id="navbar">
-        <h1>😃</h1><h1>😃</h1><h1>😃</h1><h1>😃</h1>
-        <h1 id="title">
-            The Puppet Master
-        </h1>
-        <h1>😎</h1><h1>😎</h1><h1>😎</h1><h1>😎</h1>
+    <div id="header">
+        <h1>Aspen's Adventure Gallery</h1>
     </div>
     <div id="content">
-        <img id="puppeteer" src="puppeteer.png" />
-        <div id="assignmentBlocks">
-            <div class="assignmentBlock">
-                <h1>Fade-out</h1>
-                <h1 id="ninjaEmoji">🥷🏼</h1>
+        <div id="mainDisplay">
+            <img id="mainDisplayImage" src="assets/placeholder.png" alt="Selected Aspen image">
+        </div>
+        <h3>Select an image to view</h3>
+        <div id="thumbnailsContainer">
+            <div class="thumbnail">
+                <img src="assets/Aspen1.jpg" class="thumbnailImage" alt="Aspen image 1">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
-                    //Assign the fadeOut class to the HTML element with the ninja emoji
-                    let ninjaEmojiHTML = document.getElementById("ninjaEmoji");
-                    ninjaEmojiHTML.className = "fadeOut";
-
-                    '>Click me</button>
+                    // Step 1: Select the large image with its id.
+                    let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                    // Step 2: Select this thumbnail image from its thumbnail container.
+                    let thumbnailImageHTML = this.parentElement.querySelector(".thumbnailImage");
+                    // Step 3: Copy the thumbnail image file path to the large image.
+                    mainDisplayImageHTML.src = thumbnailImageHTML.src;
+                    '>View</button>
             </div>
-            <div class="assignmentBlock">
-                <h1>Slide</h1>
-                <h1 id="yogaEmoji">🧘🏾‍♀️</h1>
+            <div class="thumbnail">
+                <img src="assets/Aspen2.jpg" class="thumbnailImage" alt="Aspen image 2">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
-                    //Assign the slide class to the HTML element with the yoga emoji
-                    let yogaEmojiHTML = document.getElementById("yogaEmoji");
-                    yogaEmojiHTML.className = "slide";
-
-                    '>Click me</button>
+                    let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                    let thumbnailImageHTML = this.parentElement.querySelector(".thumbnailImage");
+                    mainDisplayImageHTML.src = thumbnailImageHTML.src;
+                    '>View</button>
             </div>
-            <div class="assignmentBlock">
-                <h1>Grow</h1>
-                <h1 id="smileyEmoji">😀</h1>
+            <div class="thumbnail">
+                <img src="assets/Aspen3.jpg" class="thumbnailImage" alt="Aspen image 3">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
-                    //Assign the grow class to the HTML element with the smiley emoji
-                    let smileyEmojiHTML = document.getElementById("smileyEmoji");
-                    smileyEmojiHTML.className = "grow";
-
-                    '>Click me</button>
+                    let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                    let thumbnailImageHTML = this.parentElement.querySelector(".thumbnailImage");
+                    mainDisplayImageHTML.src = thumbnailImageHTML.src;
+                    '>View</button>
+            </div>
+            <div class="thumbnail">
+                <img src="assets/Aspen4.jpg" class="thumbnailImage" alt="Aspen image 4">
+                <button
+                    onclick='
+                    let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                    let thumbnailImageHTML = this.parentElement.querySelector(".thumbnailImage");
+                    mainDisplayImageHTML.src = thumbnailImageHTML.src;
+                    '>View</button>
+            </div>
+            <div class="thumbnail">
+                <img src="assets/Aspen5.jpg" class="thumbnailImage" alt="Aspen image 5">
+                <button
+                    onclick='
+                    let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                    let thumbnailImageHTML = this.parentElement.querySelector(".thumbnailImage");
+                    mainDisplayImageHTML.src = thumbnailImageHTML.src;
+                    '>View</button>
+            </div>
+            <div class="thumbnail">
+                <img src="assets/Aspen6.jpg" class="thumbnailImage" alt="Aspen image 6">
+                <button
+                    onclick='
+                    let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                    let thumbnailImageHTML = this.parentElement.querySelector(".thumbnailImage");
+                    mainDisplayImageHTML.src = thumbnailImageHTML.src;
+                    '>View</button>
+            </div>
+            <div class="thumbnail">
+                <img src="assets/Aspen7.jpg" class="thumbnailImage" alt="Aspen image 7">
+                <button
+                    onclick='
+                    let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                    let thumbnailImageHTML = this.parentElement.querySelector(".thumbnailImage");
+                    mainDisplayImageHTML.src = thumbnailImageHTML.src;
+                    '>View</button>
+            </div>
+            <div class="thumbnail">
+                <img src="assets/Aspen8.jpg" class="thumbnailImage" alt="Aspen image 8">
+                <button
+                    onclick='
+                    let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                    let thumbnailImageHTML = this.parentElement.querySelector(".thumbnailImage");
+                    mainDisplayImageHTML.src = thumbnailImageHTML.src;
+                    '>View</button>
             </div>
         </div>
     </div>
 </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ======================== DO NOT MODIFY ======================== -->
 <style>
-    #navbar {
+    #header {
         display: flex;
         justify-content: center;
-        align-items: center;
-    }
-
-    #title {
-        display: inline-block;
-    }
-
-    #puppeteer {
-        width: 25%;
     }
 
     #content {
         display: flex;
-        align-items: center;
         flex-direction: column;
-
+        align-items: center;
     }
 
-    #assignmentBlocks{
-        /* border: 3px solid purple; */
-        margin-top: 5%;
+    #mainDisplay {
+        margin-top: 3%;
+    }
+
+    #mainDisplay img {
+        width: 50vh;
+        border: 3px solid black;
+    }
+
+    #thumbnailsContainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .thumbnail {
+        position: relative;
+        margin: 5px;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        align-items: center;
+        background-color: gray;
+        border: 3px solid black;
     }
 
-    .assignmentBlock {
-        /* border: 3px solid yellow; */
-        flex: 1;
-        text-align: center;
-        margin-bottom: 3%;
+    .thumbnail img {
+        margin: 0;
+        width: 10vh;
+        object-fit: cover;
     }
 
-    #ninjaEmoji {
-        margin-top: 0%;
-        margin-bottom: 1%;
-        font-size: 8vh;
-        display: inline-block;
+    /* Part 2, step 1: hide each View button until its thumbnail is hovered. */
+    .thumbnail button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
     }
-    #yogaEmoji {
-        margin-top: 0%;
-        margin-bottom: 1%;
-        font-size: 8vh;
-        display: inline-block;
-    }
-    #smileyEmoji {
-        margin-top: 0%;
-        margin-bottom: 1%;
-        font-size: 8vh;
-        display: inline-block;
+
+    /* Part 2, step 2: reveal the View button while the thumbnail is hovered. */
+    .thumbnail:hover button {
+        display: block;
     }
 </style>
-<!-- ======================== DO NOT MODIFY ======================== -->
 
 </html>

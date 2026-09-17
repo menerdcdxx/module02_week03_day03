@@ -1,31 +1,38 @@
-# JavaScript Events
+# Javascript Events Continued
 
-## Assignment: Emoji Puppeteering
-![Example](Example.gif)
+## Assignment: Aspen's Adventure Gallery
+![Example](Example/Part1.gif)
 
-For this assignment you will make emojis perform an action when a "click" event happens on the webpage. (The keyframe and css blocks for the animations are already written and can be found at the top of index.html)
+This assignment involves creating an interactive image gallery page themed around Aspen, a golden retriever. Students will focus on using JavaScript for DOM manipulation to handle dynamic content and user interactions. This gallery features thumbnails which allow users to select and view full-size images from smaller previews.
 
-### Instructions
-**Part 1: Fade-Out (Ninja Emoji)**
-1. Make the ninja emoji fade-out when its button is clicked.
-    - Assign the "fadeOut" class to the ninja emoji when when its button is clicked
-      - Use the 'document object' to select the element with an id of "ninjaEmoji" and assign it to a variable called "ninjaEmojiHTML"
+### Instructions:
 
-      - Assign a string value of "fadeOut" to the "className" property on the ninjaEmojiHTML variable
+**Part 1: Thumbnail button functionality**
 
-**Part 2: Slide animation (Yoga Emoji)**
-1. Make the yoga emoji slide left-to-right when its button is clicked.
-    - Assign the "slide" class to the yoga emoji when when its button is clicked
-      - Use the 'document object' to select the element with an id of "yogaEmoji" and assign it to a variable called "yogaEmojiHTML"
+1. When a user clicks the "view" button on a thumbnail preview, make the thumbnail's image appear in the large display window above.
 
-      - Assign a string value of "slide" to the "className" property on the yogaEmojiHTML variable
+   - Write some javascript for each thumbnail button so that, when **clicked**, the image in the mainDisplay is changed
 
-**Part 3: Grow animation (Smiling Emoji)**
-1. Make the smiling emoji grow when its button is clicked.
-    - Assign the "grow" class to the smiley emoji when when its button is clicked
-      - Use the 'document object' to select the element with an id of "smileyEmoji" and assign it to a variable called "smileyEmojiHTML"
+      - Use the 'document object' to select the element with an id of "mainDisplayImage" and assign it to a variable called "mainDisplayImageHTML"
 
-      - Assign a string value of "grow" to the "className" property on the smileyEmojiHTML variable
+      - Access the "src" property on the mainDisplayImageHTML variable and assign the file path of the thumbnail's image to it.
 
+   <br>
 
-Take a look at Example.gif for an idea of how the end result should look.
+**Part 2: Thumbnail button presentation**
+<details>
+
+   <summary>Preview</summary>
+   <br>
+   <img src="Example/Part2.gif" />
+</details>
+
+<br>
+
+1. Make the view button hidden by default.
+
+<br>
+
+2. When a user hovers the mouse over a thumbnail, make the thumbnail's view button reappear.
+
+   - use either CSS or javascript to achieve this
